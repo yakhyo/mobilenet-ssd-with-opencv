@@ -1,1 +1,1 @@
-# Implementation mobile ssd (caffe model) using Opencv library in python
+# Object detection using Mobile SSD and Opencv in python
