@@ -14,7 +14,7 @@ classNames = { 0: 'background',
 
 net = cv2.dnn.readNetFromCaffe('MobileNetSSD_deploy.prototxt', 'MobileNetSSD_deploy.caffemodel')
 # Load image fro
-frame = cv2.imread('img.jpg')
+frame = cv2.imread('images/img.jpg')
 frame_resized = cv2.resize(frame,(300,300)) # resize frame for prediction
 heightFactor = frame.shape[0]/300.0
 widthFactor = frame.shape[1]/300.0
@@ -103,6 +103,6 @@ for i in range(detections.shape[2]):
 cv2.namedWindow("frame", cv2.WINDOW_NORMAL)
 cv2.imshow("frame", frame)
 cv2.resize(frame, (862,560))
-cv2.imwrite('result.jpg', frame)
+cv2.imwrite('images/result.jpg', frame)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
